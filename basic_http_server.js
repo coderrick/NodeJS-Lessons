@@ -8,8 +8,8 @@
 var http = require('http');
 
 function onRequest(request, response){
-    Console.log('A user made a request');
-    response.writeHead(200, ["Context-Type": "text/plain"]);
+    console.log('A user made a request');
+    response.writeHead(200, {"Context-Type":"text/plain"});
     response.write("Here is the response data");
     response.end();
 }
