@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-lessons",
+  "version": "1.0.0",
+  "description": "Katas and code examples for learning NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderrick/NodeJS-Lessons.git"
+  },
+  "author": "Derrick Wilson-Duncan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderrick/NodeJS-Lessons/issues"
+  },
+  "homepage": "https://github.com/coderrick/NodeJS-Lessons#readme"
+}
