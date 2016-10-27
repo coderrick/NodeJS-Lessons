@@ -17,8 +17,24 @@ function send404Response(response){
 function onRequest(request, response){
     if (request.method == 'GET' && request.url == '/'){
         console.log('A user made a request' + request.url);
+        response.writeHead(200, { "Content-Type": "text/plain" });
+        fs.createReadStream('./resources/chaos-sonic-adventure.jpg').pipe(response);
+
+    }else if(request.method == 'GET' && request.url == '/image'){
+        console.log('A user made a request' + request.url);
         response.writeHead(200, { "Content-Type": "image/gif" });
-        fs.createReadStream('./resources/chaos-sonic-adventure.jpg').pipe(response);//response.write("Here is the response data");
+        fs.createReadStream('./resources/chaos-sonic-adventure.jpg').pipe(response);
+
+    }else if(request.method == 'GET' && request.url == '/video'){
+        console.log('A user made a request' + request.url);
+        response.writeHead(200, { "Content-Type": "image/gif" });
+        fs.createReadStream('./resources/chaos-sonic-adventure.jpg').pipe(response);
+
+    }else if(request.method == 'GET' && request.url == '/audio'){
+        console.log('A user made a request' + request.url);
+        response.writeHead(200, { "Content-Type": "image/gif" });
+        fs.createReadStream('./resources/chaos-sonic-adventure.jpg').pipe(response);
+        
     }else{
         send404Response(response);
     }
