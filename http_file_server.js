@@ -31,10 +31,11 @@ function onRequest(request, response){
         fs.createReadStream('./resources/chaos-sonic-adventure.jpg').pipe(response);
 
     }else if(request.method == 'GET' && request.url == '/audio'){
+        //Added cases for different audio extensions based on browser type
         console.log('A user made a request' + request.url);
         response.writeHead(200, { "Content-Type": "image/gif" });
         fs.createReadStream('./resources/chaos-sonic-adventure.jpg').pipe(response);
-        
+
     }else{
         send404Response(response);
     }
