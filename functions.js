@@ -1,4 +1,6 @@
 /**
+ * Function Expression - var test = function() {};
+ * Function Declaration - function test() {};
  * 
  */
 
@@ -16,6 +18,15 @@ function showOutput(){
 var a = function (){
     console.log('I am a regular function');
 }
+
+/**
+ * http://gregfranko.com/blog/i-love-my-iife/ 
+ * IIFE (Immediately Invokable Function Expressions) function example
+ * wrapping function in parenthesis turns it into a function express see top of file
+ */
+(function(){
+  // my special code
+}());
 
 /** 
  *  Method example.
