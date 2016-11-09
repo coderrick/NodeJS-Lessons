@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 var app = express();
 
@@ -24,6 +25,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+
+// app.get( '/', function( req, res){
+//   res. render('/', {qs: req.query})
+// })
+
+app.post('/', urlencodedParser, function( req, res){
+  console. log(req.body); 
+  res. render('index', {qs: req.query}, {title:'your_page_title'})
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,3 +54,4 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
