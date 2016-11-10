@@ -32,7 +32,7 @@ app.use('/users', users);
 
 app.post('/', urlencodedParser, function( req, res){
   console. log(req.body); 
-  res. render('index', {qs: req.query}, {title:'your_page_title'})
+  res. render('index', {qs: req.query}, {title:'POST PAGE'})
 });
 
 // catch 404 and forward to error handler
