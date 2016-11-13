@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var post_example = require('./routes/post_example');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 var app = express();
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/post_example', post_example);
 
 // app.get( '/', function( req, res){
 //   res. render('/', {qs: req.query})
