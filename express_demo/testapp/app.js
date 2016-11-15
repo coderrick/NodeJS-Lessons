@@ -32,9 +32,11 @@ app.use('/post_example', post_example);
 //   res. render('/', {qs: req.query})
 // })
 
-app.post('/', urlencodedParser, function( req, res){
-  console. log(req.body); 
-  res. render('index', {qs: req.query}, {title:'POST PAGE'})
+app.post('/login', urlencodedParser, function( req, res){
+  console.log(req.body); 
+  console.log('RES########   ' + res.body);
+  //res.send(req.body);
+  //res.render('index', {qs: req.query}, {title:'POST PAGE'})
 });
 
 // catch 404 and forward to error handler
