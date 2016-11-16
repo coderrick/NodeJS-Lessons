@@ -1,1 +1,1 @@
-//Thread example
+//Thread example, event loop
