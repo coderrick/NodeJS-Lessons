@@ -28,15 +28,21 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/post_example', post_example);
 
-// app.get( '/', function( req, res){
-//   res. render('/', {qs: req.query})
-// })
+app.get( '/', function( req, res){
+  res. render('/', {qs: req.query})
+})
 
-app.post('/login', urlencodedParser, function( req, res){
-  console.log(req.body); 
+// app.post('/', urlencodedParser, function( req, res){
+//   console.log(req.body); 
+//   console.log('RES########   ' + res.body);
+//   //res.send(req.body);
+//   //res.render('index', {qs: req.query}, {title:'POST PAGE'})
+// });
+app.post('/', function(req, res, next) {
+  console.log(req.body);
+  //res.render('post_example', { title: 'EX' });
   console.log('RES########   ' + res.body);
-  //res.send(req.body);
-  //res.render('index', {qs: req.query}, {title:'POST PAGE'})
+  res.end(JSON.stringify(req.body));
 });
 
 // catch 404 and forward to error handler
