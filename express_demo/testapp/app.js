@@ -1,3 +1,6 @@
+/**
+ *  ExpressJS Tutorial 19: POST Method (body-parser)
+ */
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -29,7 +32,7 @@ app.use('/users', users);
 app.use('/post_example', post_example);
 
 app.get( '/', function( req, res){
-  res. render('/', {qs: req.query})
+  res.render('/', {qs: req.query})
 })
 
 // app.post('/', urlencodedParser, function( req, res){
@@ -38,11 +41,11 @@ app.get( '/', function( req, res){
 //   //res.send(req.body);
 //   //res.render('index', {qs: req.query}, {title:'POST PAGE'})
 // });
-app.post('/', function(req, res, next) {
+app.post('/', urlencodedParser, function(req, res, next) {
   console.log(req.body);
   //res.render('post_example', { title: 'EX' });
-  console.log('RES########   ' + res.body);
-  res.end(JSON.stringify(req.body));
+  console.log('RES =   ' + res.body);
+  res.send(JSON.stringify(req.body));
 });
 
 // catch 404 and forward to error handler
