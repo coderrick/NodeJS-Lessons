@@ -1,3 +1,8 @@
+/**
+ * 
+ * Credit: https://www.cockroachlabs.com/docs/build-a-test-app.html
+ */
+
 var async = require('async');
 
 // Require the driver.
