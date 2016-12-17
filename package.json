@@ -2,9 +2,6 @@
   "name": "nodejs-lessons",
   "version": "1.0.0",
   "description": "Katas and code examples for learning NodeJS",
-  "dependencies": {
-    "rambda": "latest"
-  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
