@@ -5,7 +5,7 @@
  * Function Declaration - function test() {};
  * 
  */
-
+module.exports = {
 
 /**
  * Regular function example
@@ -40,7 +40,7 @@ var anObject = {
         console.log('I\'m a method');
     }
 }
-
+};
 
 /**
  * http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/
