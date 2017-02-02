@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "dash": "nodejs-dashboard node ./bin/www"
   },
-  "dependencies": {
+  "dependencies": { 
     "nodejs-dashboard": "*",
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
